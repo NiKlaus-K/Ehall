@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* sans-serif:表示无衬线体 serif:表示有衬线体 */
+	font-family: "microsoft yahei",sans-serif;
+    box-sizing: border-box;
+}
+.content{
+    width: 100%;
+    padding: 40px 0;
+    background: white;
+}
+.content h1{
+	color: #10a5ca;
+	text-align: center;
+}
+/* ↓↓↓↓↓↓搜索框样式 */
+.search{
+	margin: 5px auto;
+	text-align: center;
+	width: 500px;
+	height: 50px;
+	margin: 10px auto;
+}
+
+.search>input:first-of-type {
+	/*输入框高度设置为40px, border占据2px，总高度为42px*/
+	width: 380px;
+	height: 40px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	outline: none;
+}
+
+.search>input:first-of-type:focus {
+	border: 1px solid #317ef3;
+	padding-left: 0px;
+}
+
+.search>input:last-of-type {
+	/*button按钮border并不占据外围大小，设置高度42px*/
+	width: 100px;
+	height: 40px;
+	position: absolute;
+	background: #317ef3;
+	border: 1px solid #317ef3;
+	color: #fff;
+	font-size: 16px;
+	outline: none;
+}
+/* ↑↑↑↑↑↑↑↑搜索框样式 */
+/* 高亮显示部分样式 */
+span{
+	color: white;
+	background: #f39c12;
+	font-weight:bold;
+}
+.list{
+	width: 100%;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.list h2{
+	color: #2eadcf;
+	font-size: 24px;
+	font-weight:bold;	
+	margin: 0px 30px 10px 30px;
+	padding: 0px 0px 10px 0px;
+	border-bottom-style:solid;
+	border-color: #f1f1f1;
+}
+.workflow{
+	width: 100%;
+	padding: 0 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.t1{
+	/* 去掉li标签前的点 */
+	list-style:none;
+	flex:20%;
+	padding: 10px;
+	max-width: 20%;
+	height: 50px;
+	margin: 10px 40px;
+	font-size: 20px;
+	border-style: solid;
+	border-color: #F1F1F1;
+	border-width:2px;
+	position: relative;
+	/* 以下三行实现单行文本溢出时显示省略号（...） */
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.t1 i{
+	text-align: left;
+	/* background: #10A5CA; */
+	margin: 0px 10px;
+}
+.t1 a{
+	text-align: left;
+	/* background: #10A5CA; */
+	color: black;
+	text-decoration:none;
+}
+.t1 a:hover{
+	/* background: #10A5CA; */
+	color: #e84c3d;
+}
+
+.list p{
+	position: relative;
+	text-align: right;
+	margin:10px 60px;
+}
+.list a{
+	color: black;
+	text-decoration:none;
+}
+.list a:hover{
+	color: #e84c3d;
+}
+
+@media screen and (max-width:960px) {
+    .workflow .t1{
+        flex:33.33%;
+	}
+}
+
+@media screen and (max-width:768px) {
+    .workflow .t1{
+        flex:50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .workflow .t1{
+        flex:50%;
+    }
+}
+
+/* -------text.html 样式-------- */
+
+.input{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+}
+
+.input2{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 200px;
+    border-width: 2px;
+    border-style: solid;
+}
+.text{
+    position: absolute;
+    top: 400px;
+    border: red;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.text .text-input p{
+    border: yellow;
+    border-width: 2px;
+    border-style: solid;
+}

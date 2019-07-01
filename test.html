@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css:hover状态改变另一个元素样式的使用</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #069;
+      line-height: 150px;
+      text-align: center;
+      margin: 20px 0;
+      color: #FFF;
+    }
+
+    .change {
+      font-size: 20px;
+      color: #0cf;
+    }
+
+    /* 情景一：两个是兄弟元素 */
+
+    .box:hover+.change {
+      color: red;
+    }
+
+    /* 情景二：两个是父子元素 */
+
+    .box:hover .change {
+      color: red;
+    }
+
+    /* 情景二：两个是兄弟元素,改变的是一个兄弟元素的子元素 */
+
+    .box:hover+#c>.change {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!--  情景一：两个是兄弟元素  -->
+  <div class="box"></div>
+  <div class="change">兄弟元素</div>
+  <!--  情景二：两个是父子元素  -->
+  <div class="box">
+    <span class="change">父元素的子元素</span>
+  </div>
+  <!--  情景二：两个是兄弟元素,改变的是一个兄弟元素的子元素  -->
+  <div class="box"></div>
+  <div id='c'>
+    <div class="change">兄弟元素的子元素</div>
+  </div>
+</body>
+
+</html>
