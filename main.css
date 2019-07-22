@@ -35,11 +35,12 @@
     border: 1px solid #ccc;
     font-size: 16px;
     outline: none;
+    padding: 0 10px;
 }
 
 .search>input:first-of-type:focus {
     border: 1px solid #317ef3;
-    padding-left: 0px;
+    padding: 0 10px;
 }
 
 .search>input:last-of-type {
